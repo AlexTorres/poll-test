@@ -7,29 +7,39 @@
 //
 
 import XCTest
-
+import OHHTTPStubs
+@testable import Poll
 class CommonClassesTest: XCTestCase {
+  override func setUp() {
+    super.setUp()
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+  
+  func testConfigurationCase() {
+    let testConfiguration = Configuration()
+    
+    XCTAssertNotNil(testConfiguration.configuration)
+    XCTAssertNotNil(testConfiguration.path)
+    XCTAssertNotNil(testConfiguration.apiEndPoint)
+    
+  }
+  
+  func testAPIServices () {
+    let expectation = self.expectationWithDescription("High Expectations")
+    let service = Service()
+    service.apiGETRequest({
+      XCTAssertNotNil($0)
+      expectation.fulfill()
+    }) {
+      XCTAssertNotNil($0)
+      expectation.fulfill()
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+    waitForExpectationsWithTimeout(60) { print($0.debugDescription) }
+  }
 }

@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+  use_frameworks!
+target 'Poll' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+
+
+  # Pods for Poll
+pod 'Alamofire', '~> 3.5'
+pod 'pop', '~> 1.0'
+pod 'AlamofireObjectMapper', '~> 3.0'
+pod 'ObjectMapper', '~> 1.3'
+pod 'PKHUD'
+
+  target 'PollTests' do
+    inherit! :search_paths
+    pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
+    pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
+    # Pods for testing
+  end
+
+  target 'PollUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

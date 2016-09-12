@@ -1,0 +1,14 @@
+/* 
+  localizable.strings
+  Poll
+
+  Created by John Alexandert Torres on 9/10/16.
+  Copyright © 2016 webcat. All rights reserved.
+*/
+
+"QuestionnaireView..titleLabel.text"="WebCat Questionary";
+"QuestionView.sendButton.enabled.title"="Send Choice";
+"QuestionView.sendButton.disabled.title"="Please select a Choice";
+
+"QuestionnaireView.sendQuestionaryButton.enabled.title"="Send form";
+"QuestionnaireView.sendQuestionaryButton.disabled.title"="Please Fill the form";
