@@ -28,7 +28,7 @@ class QuestionsInteractor: QuestionsDataManagerInputProtocol {
     })
   }
   func saveQuestionnaire(questions: [QuestionModel]?) {
-    var newQuestions
+    // var newQuestions
   }
   
 }
