@@ -1,9 +1,6 @@
-
-
-
 # README #
 
-Welcome for start running the project download it and run "pod install" for all dependencies.[CocoaPods Official site](https://cocoapods.org)
+Welcome for start running the project download it, in console go where is the pods file located and run "pod install" for all dependencies.[CocoaPods Official site](https://cocoapods.org)
 
 ## Architecture ##
 
@@ -17,12 +14,14 @@ Welcome for start running the project download it and run "pod install" for all 
 
 * Mapping JSON [JSONModel](https://github.com/icanzilb/JSONModel)
 
-* Animation JSON [JSONModel](https://github.com/icanzilb/JSONModel)
+* Animation [POP](https://github.com/facebook/pop)
+
+* Charts [Charts](https://github.com/danielgindi/Charts)
+
+* PKHUD [HUD](https://github.com/pkluz/PKHUD)
+
+* Object Mapper [HUD](https://github.com/Hearst-DD/ObjectMapper)
 
 ## Code guidelines ##
 
 * The Official raywenderlich.com  [Objective-c Style Guide] (https://github.com/raywenderlich/objective-c-style-guide)
-
-## CI ##
-
-* TBC
