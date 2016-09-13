@@ -22,4 +22,4 @@ Welcome for start running the project download it, in console go where is the po
 
 ## Code guidelines ##
 
-* The Official raywenderlich.com  [Objective-c Style Guide] (https://github.com/raywenderlich/objective-c-style-guide)
+* The Official raywenderlich.com  [Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
