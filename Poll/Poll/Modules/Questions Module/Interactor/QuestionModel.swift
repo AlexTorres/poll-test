@@ -15,7 +15,6 @@ struct QuestionModel: Mappable {
   var choices: [ChoiceModel]?
   
   var isAnswered: Bool = false
-  var selectedChoice: UInt = 0
   init?(_ map: Map) {
   }
   mutating func mapping(map: Map) {
@@ -24,9 +23,34 @@ struct QuestionModel: Mappable {
     choices <- map["choices"]
   }
   
-  mutating func selectChoice (selectedChoice: UInt) {
-    self.selectedChoice = selectedChoice
-    isAnswered = true
+  var bars: [(String, Double)] {
+    get {
+      var array = [(String, Double)]()
+      for (_, value) in choices!.enumerate() {
+        array.append((value.choice!, Double(value.votes!)))
+      }
+      
+      return array
+    }
+    
+  }
+  
+  var parts: Double {
+    get {
+      return abs((Double(maxVotes) * 1.5) / 3)
+    }
+  }
+  
+  var maxVotes: Int {
+    get {
+      let maxValue = choices!.reduce(Int.min, combine: { max($0, $1.votes!) })
+      return maxValue
+    }
+  }
+  var allVotes: Int {
+    get {
+      return choices!.reduce(0, combine: { $0 + $1.votes! })
+    }
   }
   
 }

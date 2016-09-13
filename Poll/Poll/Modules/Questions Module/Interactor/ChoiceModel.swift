@@ -13,7 +13,7 @@ struct ChoiceModel: Mappable {
   var choice: String?
   var url: String?
   var votes: Int?
-  var selected: Bool = false
+
   
   init?(_ map: Map) {
   }

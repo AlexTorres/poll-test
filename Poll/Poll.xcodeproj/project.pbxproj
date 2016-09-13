@@ -11,12 +11,13 @@
 		1247A3BB158EB8700F18D28E /* Pods_PollTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA436B3817D64F88338E4452 /* Pods_PollTests.framework */; };
 		ED07A0C10128B7FBC9AB6E23 /* Pods_PollUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601CF2AF9847AF9E37ABC290 /* Pods_PollUITests.framework */; };
 		FA01F4601D822DFD00CDC976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01F45F1D822DFD00CDC976 /* AppDelegate.swift */; };
-		FA01F4621D822DFD00CDC976 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01F4611D822DFD00CDC976 /* FirstViewController.swift */; };
-		FA01F4641D822DFD00CDC976 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01F4631D822DFD00CDC976 /* SecondViewController.swift */; };
 		FA01F4671D822DFD00CDC976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA01F4651D822DFD00CDC976 /* Main.storyboard */; };
 		FA01F4691D822DFD00CDC976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA01F4681D822DFD00CDC976 /* Assets.xcassets */; };
 		FA01F46C1D822DFD00CDC976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA01F46A1D822DFD00CDC976 /* LaunchScreen.storyboard */; };
 		FA01F4821D822DFD00CDC976 /* PollUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01F4811D822DFD00CDC976 /* PollUITests.swift */; };
+		FA0224721D87BB1300D55ACB /* AddQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224711D87BB1200D55ACB /* AddQuestionsView.swift */; };
+		FA0224741D87BF0D00D55ACB /* AddChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0224731D87BF0D00D55ACB /* AddChoiceTableViewCell.swift */; };
+		FA2F784F1D879FB500D4CEEE /* ResultView+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F784E1D879FB500D4CEEE /* ResultView+UITableView.swift */; };
 		FA73B9CC1D8637B200D78B1C /* CommonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B9C91D8637B200D78B1C /* CommonAnimations.swift */; };
 		FA73B9CD1D8637B200D78B1C /* DismissingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B9CA1D8637B200D78B1C /* DismissingAnimator.swift */; };
 		FA73B9CE1D8637B200D78B1C /* PresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B9CB1D8637B200D78B1C /* PresentingAnimator.swift */; };
@@ -54,6 +55,14 @@
 		FAA66FCB1D83490F00868C46 /* QuestionsModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA66FCA1D83490F00868C46 /* QuestionsModuleTest.swift */; };
 		FAA66FCD1D83496400868C46 /* CommonClassesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA66FCC1D83496400868C46 /* CommonClassesTest.swift */; };
 		FAA66FCF1D8349CB00868C46 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA66FCE1D8349CB00868C46 /* Configuration.plist */; };
+		FAB41D6E1D86EF6600D58FF5 /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D6D1D86EF6600D58FF5 /* LocalManager.swift */; };
+		FAB41D701D87355300D58FF5 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D6F1D87355300D58FF5 /* AdminView.swift */; };
+		FAB41D721D87357100D58FF5 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D711D87357100D58FF5 /* ResultsView.swift */; };
+		FAB41D741D87410700D58FF5 /* AdminProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D731D87410700D58FF5 /* AdminProtocols.swift */; };
+		FAB41D761D8742CE00D58FF5 /* AdminInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D751D8742CE00D58FF5 /* AdminInteractor.swift */; };
+		FAB41D781D8748C900D58FF5 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D771D8748C900D58FF5 /* AdminPresenter.swift */; };
+		FAB41D7A1D87556800D58FF5 /* AdminWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D791D87556800D58FF5 /* AdminWireframe.swift */; };
+		FAB41D7D1D875F0900D58FF5 /* AdminModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D7C1D875F0900D58FF5 /* AdminModuleTest.swift */; };
 		FAF0DE0C1D839CF5008C9899 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0B1D839CF5008C9899 /* Configuration.swift */; };
 		FAF0DE0E1D83A41A008C9899 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0D1D83A41A008C9899 /* Constants.swift */; };
 		FAF0DE101D83B011008C9899 /* EmumsAndDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0F1D83B011008C9899 /* EmumsAndDefs.swift */; };
@@ -89,8 +98,6 @@
 		E645025FD6AA1C008B93ED08 /* Pods_Poll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA01F45C1D822DFD00CDC976 /* Poll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA01F45F1D822DFD00CDC976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA01F4611D822DFD00CDC976 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FA01F4631D822DFD00CDC976 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FA01F4681D822DFD00CDC976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA01F46D1D822DFD00CDC976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA01F4721D822DFD00CDC976 /* PollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +105,9 @@
 		FA01F47D1D822DFD00CDC976 /* PollUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA01F4811D822DFD00CDC976 /* PollUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollUITests.swift; sourceTree = "<group>"; };
 		FA01F4831D822DFD00CDC976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0224711D87BB1200D55ACB /* AddQuestionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuestionsView.swift; sourceTree = "<group>"; };
+		FA0224731D87BF0D00D55ACB /* AddChoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		FA2F784E1D879FB500D4CEEE /* ResultView+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResultView+UITableView.swift"; sourceTree = "<group>"; };
 		FA73B9C91D8637B200D78B1C /* CommonAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimations.swift; sourceTree = "<group>"; };
 		FA73B9CA1D8637B200D78B1C /* DismissingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissingAnimator.swift; sourceTree = "<group>"; };
 		FA73B9CB1D8637B200D78B1C /* PresentingAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingAnimator.swift; sourceTree = "<group>"; };
@@ -138,6 +148,14 @@
 		FAA66FCA1D83490F00868C46 /* QuestionsModuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsModuleTest.swift; sourceTree = "<group>"; };
 		FAA66FCC1D83496400868C46 /* CommonClassesTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonClassesTest.swift; path = Common/CommonClassesTest.swift; sourceTree = "<group>"; };
 		FAA66FCE1D8349CB00868C46 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Configuration.plist; path = Resources/Plist/Configuration.plist; sourceTree = "<group>"; };
+		FAB41D6D1D86EF6600D58FF5 /* LocalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
+		FAB41D6F1D87355300D58FF5 /* AdminView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		FAB41D711D87357100D58FF5 /* ResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		FAB41D731D87410700D58FF5 /* AdminProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminProtocols.swift; sourceTree = "<group>"; };
+		FAB41D751D8742CE00D58FF5 /* AdminInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminInteractor.swift; sourceTree = "<group>"; };
+		FAB41D771D8748C900D58FF5 /* AdminPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
+		FAB41D791D87556800D58FF5 /* AdminWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminWireframe.swift; sourceTree = "<group>"; };
+		FAB41D7C1D875F0900D58FF5 /* AdminModuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminModuleTest.swift; path = PollTests/AdminModuleTest/AdminModuleTest.swift; sourceTree = SOURCE_ROOT; };
 		FAF0DE0B1D839CF5008C9899 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FAF0DE0D1D83A41A008C9899 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAF0DE0F1D83B011008C9899 /* EmumsAndDefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmumsAndDefs.swift; sourceTree = "<group>"; };
@@ -225,8 +243,6 @@
 				FAF0DE091D8399A0008C9899 /* Common */,
 				FAA66FAA1D82ED1400868C46 /* Modules */,
 				FA01F45F1D822DFD00CDC976 /* AppDelegate.swift */,
-				FA01F4611D822DFD00CDC976 /* FirstViewController.swift */,
-				FA01F4631D822DFD00CDC976 /* SecondViewController.swift */,
 				FA01F4651D822DFD00CDC976 /* Main.storyboard */,
 				FA01F4681D822DFD00CDC976 /* Assets.xcassets */,
 				FA01F46A1D822DFD00CDC976 /* LaunchScreen.storyboard */,
@@ -240,6 +256,7 @@
 		FA01F4751D822DFD00CDC976 /* PollTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAB41D7B1D875EB400D58FF5 /* AdminModuleTest */,
 				FA83022F1D8437B600A0ECD1 /* Resources */,
 				FAA66FC71D82EF9D00868C46 /* QuestionsModuleTest */,
 				FA01F4781D822DFD00CDC976 /* Info.plist */,
@@ -323,8 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA66FAB1D82ED1400868C46 /* AdminModule */,
-				FAA66FB21D82ED1400868C46 /* CreateCuestionModule */,
-				FAA66FB91D82ED1400868C46 /* QuestionModule */,
 				FAA66FC01D82ED1400868C46 /* Questions Module */,
 			);
 			path = Modules;
@@ -353,6 +368,7 @@
 		FAA66FAD1D82ED1400868C46 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				FAB41D751D8742CE00D58FF5 /* AdminInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -360,6 +376,7 @@
 		FAA66FAE1D82ED1400868C46 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FAB41D771D8748C900D58FF5 /* AdminPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -367,6 +384,7 @@
 		FAA66FAF1D82ED1400868C46 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				FAB41D731D87410700D58FF5 /* AdminProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -374,6 +392,11 @@
 		FAA66FB01D82ED1400868C46 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAB41D6F1D87355300D58FF5 /* AdminView.swift */,
+				FAB41D711D87357100D58FF5 /* ResultsView.swift */,
+				FA2F784E1D879FB500D4CEEE /* ResultView+UITableView.swift */,
+				FA0224711D87BB1200D55ACB /* AddQuestionsView.swift */,
+				FA0224731D87BF0D00D55ACB /* AddChoiceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,116 +404,7 @@
 		FAA66FB11D82ED1400868C46 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		FAA66FB21D82ED1400868C46 /* CreateCuestionModule */ = {
-			isa = PBXGroup;
-			children = (
-				FAA66FB31D82ED1400868C46 /* APIManager */,
-				FAA66FB41D82ED1400868C46 /* Interactor */,
-				FAA66FB51D82ED1400868C46 /* Presenter */,
-				FAA66FB61D82ED1400868C46 /* Protocols */,
-				FAA66FB71D82ED1400868C46 /* View */,
-				FAA66FB81D82ED1400868C46 /* Wireframe */,
-			);
-			path = CreateCuestionModule;
-			sourceTree = "<group>";
-		};
-		FAA66FB31D82ED1400868C46 /* APIManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIManager;
-			sourceTree = "<group>";
-		};
-		FAA66FB41D82ED1400868C46 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		FAA66FB51D82ED1400868C46 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FAA66FB61D82ED1400868C46 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		FAA66FB71D82ED1400868C46 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FAA66FB81D82ED1400868C46 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		FAA66FB91D82ED1400868C46 /* QuestionModule */ = {
-			isa = PBXGroup;
-			children = (
-				FAA66FBA1D82ED1400868C46 /* APIManager */,
-				FAA66FBB1D82ED1400868C46 /* Interactor */,
-				FAA66FBC1D82ED1400868C46 /* Presenter */,
-				FAA66FBD1D82ED1400868C46 /* Protocols */,
-				FAA66FBE1D82ED1400868C46 /* View */,
-				FAA66FBF1D82ED1400868C46 /* Wireframe */,
-			);
-			path = QuestionModule;
-			sourceTree = "<group>";
-		};
-		FAA66FBA1D82ED1400868C46 /* APIManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIManager;
-			sourceTree = "<group>";
-		};
-		FAA66FBB1D82ED1400868C46 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		FAA66FBC1D82ED1400868C46 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FAA66FBD1D82ED1400868C46 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		FAA66FBE1D82ED1400868C46 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FAA66FBF1D82ED1400868C46 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
+				FAB41D791D87556800D58FF5 /* AdminWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -569,6 +483,15 @@
 			path = QuestionsModuleTest;
 			sourceTree = "<group>";
 		};
+		FAB41D7B1D875EB400D58FF5 /* AdminModuleTest */ = {
+			isa = PBXGroup;
+			children = (
+				FAB41D7C1D875F0900D58FF5 /* AdminModuleTest.swift */,
+			);
+			name = AdminModuleTest;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FAF0DE091D8399A0008C9899 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +505,7 @@
 				FA896A271D860F6200EAB1EC /* UIColor+ColorUtils.swift */,
 				FAF0DE111D83B406008C9899 /* Service.swift */,
 				FA896A251D85FE3A00EAB1EC /* AnimationButton.swift */,
+				FAB41D6D1D86EF6600D58FF5 /* LocalManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -870,33 +794,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB41D781D8748C900D58FF5 /* AdminPresenter.swift in Sources */,
 				FA7825491D84D9190087C920 /* QuestionsWireframe.swift in Sources */,
 				FA83023B1D84C4BC00A0ECD1 /* ChoiceModel.swift in Sources */,
 				FA83023D1D84D3A600A0ECD1 /* QuestiosnPresenter.swift in Sources */,
 				FA8302391D84C46D00A0ECD1 /* QuestionModel.swift in Sources */,
-				FA01F4641D822DFD00CDC976 /* SecondViewController.swift in Sources */,
 				FAF0DE121D83B406008C9899 /* Service.swift in Sources */,
+				FA0224741D87BF0D00D55ACB /* AddChoiceTableViewCell.swift in Sources */,
 				FAF0DE101D83B011008C9899 /* EmumsAndDefs.swift in Sources */,
 				FA7F3EC11D84F92E0048EF7B /* CommonProtocols.swift in Sources */,
 				FA73B9D01D863B8200D78B1C /* UIView+Utils.swift in Sources */,
 				FA896A2C1D861FBC00EAB1EC /* QuestionViewController.swift in Sources */,
 				FA8302371D84C2F000A0ECD1 /* QuestionsModel.swift in Sources */,
+				FAB41D7A1D87556800D58FF5 /* AdminWireframe.swift in Sources */,
+				FAB41D721D87357100D58FF5 /* ResultsView.swift in Sources */,
 				FA896A261D85FE3A00EAB1EC /* AnimationButton.swift in Sources */,
 				FA8302291D83B87D00A0ECD1 /* QuestionsProtocols.swift in Sources */,
 				FA896A241D85FA5200EAB1EC /* Questionnaire+UITableView.swift in Sources */,
+				FAB41D701D87355300D58FF5 /* AdminView.swift in Sources */,
+				FAB41D761D8742CE00D58FF5 /* AdminInteractor.swift in Sources */,
 				FA8302331D84588400A0ECD1 /* PostRouter.swift in Sources */,
 				FAF0DE0C1D839CF5008C9899 /* Configuration.swift in Sources */,
 				FA73B9D21D863F8500D78B1C /* QuestionViewController+UITableView.swift in Sources */,
 				FA01F4601D822DFD00CDC976 /* AppDelegate.swift in Sources */,
 				FA73B9D51D86415800D78B1C /* ChoiceTableViewCell.swift in Sources */,
 				FA73B9CD1D8637B200D78B1C /* DismissingAnimator.swift in Sources */,
-				FA01F4621D822DFD00CDC976 /* FirstViewController.swift in Sources */,
 				FA73B9CC1D8637B200D78B1C /* CommonAnimations.swift in Sources */,
 				FAA66FC91D8334DF00868C46 /* QuestionnaireView.swift in Sources */,
 				FA73B9CE1D8637B200D78B1C /* PresentingAnimator.swift in Sources */,
 				FA896A281D860F6300EAB1EC /* UIColor+ColorUtils.swift in Sources */,
 				FA896A201D85F59400EAB1EC /* QuestionTableViewCell.swift in Sources */,
+				FA2F784F1D879FB500D4CEEE /* ResultView+UITableView.swift in Sources */,
 				FA8302351D84C21300A0ECD1 /* QuestionInteractor.swift in Sources */,
+				FA0224721D87BB1300D55ACB /* AddQuestionsView.swift in Sources */,
+				FAB41D741D87410700D58FF5 /* AdminProtocols.swift in Sources */,
+				FAB41D6E1D86EF6600D58FF5 /* LocalManager.swift in Sources */,
 				FAF0DE0E1D83A41A008C9899 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,6 +838,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA66FCD1D83496400868C46 /* CommonClassesTest.swift in Sources */,
+				FAB41D7D1D875F0900D58FF5 /* AdminModuleTest.swift in Sources */,
 				FAA66FCB1D83490F00868C46 /* QuestionsModuleTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

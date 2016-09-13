@@ -10,11 +10,12 @@ import UIKit
 import PKHUD
 class QuestionnaireView: UIViewController, QuestionsViewProtocol, SetupViewProtocol {
   var presenter: protocol<QuestionsPresenterProtocol, QuestionsDataManagerOutputProtocol>?
-  var questions: [QuestionModel]?
+  var questions: QuestionsModel?
   var wireframe: QuestionsWireframeProtocol?
   var selectedQuestion: Int?
   @IBOutlet weak var tableView: UITableView?
   
+  @IBOutlet weak var reloadEntries: AnimationButton!
   @IBOutlet weak var sendQuestionnaireButton: AnimationButton!
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,6 +31,13 @@ class QuestionnaireView: UIViewController, QuestionsViewProtocol, SetupViewProto
   }
   func setupView() {
     wireframe = QuestionsWireframe(viewProtocol: self)
+    presenter?.searchQuestions()
+    PKHUD.sharedHUD.contentView = PKHUDProgressView()
+    PKHUD.sharedHUD.show()
+    
+  }
+  
+  func loadEntries() {
     presenter?.searchQuestions()
     PKHUD.sharedHUD.contentView = PKHUDProgressView()
     PKHUD.sharedHUD.show()
@@ -59,6 +67,7 @@ class QuestionnaireView: UIViewController, QuestionsViewProtocol, SetupViewProto
   }
   func configureButtons() {
     sendQuestionnaireButton.enabled = false
+    reloadEntries.setTitle(NSLocalizedString("QuestionnaireView.reloadEntries.enabled.title", comment: ""), forState: .Normal)
     sendQuestionnaireButton.setTitle(NSLocalizedString("QuestionnaireView.sendQuestionaryButton.enabled.title", comment: ""), forState: .Normal)
     sendQuestionnaireButton.setTitle(NSLocalizedString("QuestionnaireView.sendQuestionaryButton.disabled.title", comment: ""), forState: .Disabled)
   }
@@ -74,16 +83,19 @@ class QuestionnaireView: UIViewController, QuestionsViewProtocol, SetupViewProto
     checkStatusButton()
   }
   func updateQuestionnaire(index: Int?) {
-    questions![selectedQuestion!].isAnswered = true
-    questions![selectedQuestion!].selectedChoice = UInt(index!)
-    questions![selectedQuestion!].choices![index!].votes  =  questions![selectedQuestion!].choices![index!].votes! + 1
+    
+    questions?.questions?[selectedQuestion!].isAnswered = true
+    questions?.questions?[selectedQuestion!].choices![index!].votes = questions!.questions![selectedQuestion!].choices![index!].votes! + 1
   }
   func checkStatusButton() {
-    sendQuestionnaireButton.enabled = questions!.reduce(true, combine: { $0 && $1.isAnswered })
+    sendQuestionnaireButton.enabled = questions!.questions!.reduce(true, combine: { $0 && $1.isAnswered })
   }
   
   @IBAction func sendAction(sender: AnyObject) {
     presenter?.completedQuestionnaire(questions)
   }
   
+  @IBAction func reloadEntriesAction(sender: AnyObject) {
+    loadEntries()
+  }
 }

@@ -11,7 +11,7 @@ import ObjectMapper
 
 protocol QuestionsViewProtocol: class {
   var presenter: protocol<QuestionsPresenterProtocol, QuestionsDataManagerOutputProtocol>? { get set }
-  var questions: [QuestionModel]? { get set }
+  var questions: QuestionsModel? { get set }
   var wireframe: QuestionsWireframeProtocol? { get set }
   
   func setupView()
@@ -27,19 +27,20 @@ protocol QuestionsPresenterProtocol: class {
   
   func searchQuestions()
   func loadQuestionView(question: QuestionModel?)
-  func completedQuestionnaire(questions: [QuestionModel]?)
+  func completedQuestionnaire(questions: QuestionsModel?)
 }
 protocol QuestionsDataManagerInputProtocol: class {
   var presenter: protocol<QuestionsPresenterProtocol, QuestionsDataManagerOutputProtocol>? { get set }
   var questionsAPIService: Service? { get set }
+  var localManager: LocalManager? { get set }
   
   func loadQuestionsFromAPI ()
-  func saveQuestionnaire(questions: [QuestionModel]?)
+  func saveQuestionnaire(questions: QuestionsModel?)
   
 }
 
 protocol QuestionsDataManagerOutputProtocol: class {
-  func updateQuestions(questions: [QuestionModel]?)
+  func updateQuestions(questions: QuestionsModel?)
   func errorFromServer(error: NSError?)
 }
 

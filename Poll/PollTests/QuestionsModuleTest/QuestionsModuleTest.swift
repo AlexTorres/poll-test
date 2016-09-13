@@ -52,9 +52,9 @@ class QuestionsModuleTest: XCTestCase {
   
   func testOutputWithData() {
     
-    presenter?.updateQuestions(questionItem?.questions)
+    presenter?.updateQuestions(questionItem)
     XCTAssertNotNil(view.questions)
-    XCTAssertTrue(view.questions?.count > 0)
+    XCTAssertTrue(view.questions?.questions?.count > 0)
   }
   
   func testShowQuestion() {
@@ -74,9 +74,9 @@ class QuestionsModuleTest: XCTestCase {
     let dataString = String(data: jsonData!, encoding: NSUTF8StringEncoding)
     let jsonSting = "{\"result\":\(dataString!)}"
     let questionZeroItem = Mapper<QuestionsModel>().map(jsonSting)
-    presenter?.updateQuestions(questionZeroItem?.questions)
+    presenter?.updateQuestions(questionZeroItem)
     XCTAssertNotNil(view.questions)
-    XCTAssertTrue(view.questions?.count == 0)
+    XCTAssertTrue(view.questions?.questions?.count == 0)
   }
   
   func testProtocolsConnections() {

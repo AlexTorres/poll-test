@@ -30,6 +30,16 @@ class CommonClassesTest: XCTestCase {
     
   }
   
+  func testLocalManager() {
+    let localManager = LocalManager()
+    if localManager.questionsSting == String() {
+      XCTAssertNil(localManager.questions)
+    } else {
+      XCTAssertNotNil(localManager.questions)
+    }
+    
+  }
+  
   func testAPIServices () {
     let expectation = self.expectationWithDescription("High Expectations")
     let service = Service()
@@ -41,5 +51,25 @@ class CommonClassesTest: XCTestCase {
       expectation.fulfill()
     }
     waitForExpectationsWithTimeout(60) { print($0.debugDescription) }
+  }
+  
+  func testAPIPost () {
+    let expectation = self.expectationWithDescription("High Expectations")
+    let choices = ["Cat", "Dog", "Rat"]
+    let question = "Yout pet?"
+    let paramethers: [String: AnyObject] = [
+      "question": question,
+      "choices": choices]
+    let service = Service()
+    
+    service.apiPOSTRequest(paramethers, completion: {
+      XCTAssertNotNil($0)
+      expectation.fulfill()
+    }) {
+      XCTAssertNotNil($0)
+      expectation.fulfill()
+    }
+    waitForExpectationsWithTimeout(60) { print($0.debugDescription) }
+    
   }
 }

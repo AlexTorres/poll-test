@@ -19,7 +19,7 @@ class QuestionsPresenter: QuestionsPresenterProtocol, QuestionsDataManagerOutput
   func searchQuestions() {
     interactor?.loadQuestionsFromAPI()
   }
-  func updateQuestions(questions: [QuestionModel]?) {
+  func updateQuestions(questions: QuestionsModel?) {
     view?.questions = questions
     view?.reloadViewQuestions()
   }
@@ -29,7 +29,7 @@ class QuestionsPresenter: QuestionsPresenterProtocol, QuestionsDataManagerOutput
   func selectedIndex(index: Int?) {
     view?.selectedChoice(index)
   }
-  func completedQuestionnaire(questions: [QuestionModel]?) {
+  func completedQuestionnaire(questions: QuestionsModel?) {
     interactor?.saveQuestionnaire(questions)
   }
   

@@ -54,6 +54,7 @@ enum PostRouter: URLRequestConvertible {
     let (encodedRequest, _) = encoding.encode(URLRequest, parameters: params)
     
     encodedRequest.HTTPMethod = method.rawValue
+    encodedRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
     return encodedRequest
   }

@@ -44,15 +44,6 @@ class AnimationButton: UIButton {
     self.layer.pop_addAnimation(scaleAnimation, forKey: "layerScaleDefaultAnimation")
   }
   
-  @IBInspectable var borderWidth: CGFloat = 0 {
-    didSet {
-      layer.borderWidth = borderWidth
-    }
-  }
-  @IBInspectable var borderColor: UIColor? {
-    didSet {
-      layer.borderColor = borderColor?.CGColor
-    }
-  }
+ 
 }
 

@@ -1,14 +1,14 @@
 //
-//  Questionaty+UITableView.swift
+//  ResultView+UITableView.swift
 //  Poll
 //
-//  Created by John Alexandert Torres on 9/11/16.
+//  Created by John Alexandert Torres on 9/12/16.
 //  Copyright © 2016 webcat. All rights reserved.
 //
 
 import Foundation
 import UIKit
-extension QuestionnaireView: UITableViewDelegate, UITableViewDataSource {
+extension ResultsView: UITableViewDelegate, UITableViewDataSource {
   // MARK: - Table view data source
   
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -22,7 +22,7 @@ extension QuestionnaireView: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(QuestionTableViewCell.kReuseIdentifier, forIndexPath: indexPath) as! QuestionTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(ResultsView.kReuseIdentifier, forIndexPath: indexPath) as! QuestionTableViewCell
     
     // Configure the cell...
     let question = questions?.questions?[indexPath.row]
@@ -35,11 +35,12 @@ extension QuestionnaireView: UITableViewDelegate, UITableViewDataSource {
     return cell
   }
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    selectedQuestion = indexPath.row
-    if !questions!.questions![indexPath.row].isAnswered {
-      presenter?.loadQuestionView(questions?.questions?[indexPath.row])
-    }
+    addChart(questions?.questions?[indexPath.row])
+    // presenter?.loadQuestionView(questions?.questions?[indexPath.row])
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     
+  }
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
   }
 }

@@ -21,6 +21,7 @@ PODS:
     - OHHTTPStubs/Core
   - PKHUD (3.2.1)
   - pop (1.0.9)
+  - SwiftCharts (0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.5)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift
   - PKHUD
   - pop (~> 1.0)
+  - SwiftCharts (~> 0.4)
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
@@ -38,7 +40,8 @@ SPEC CHECKSUMS:
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SwiftCharts: 84b43d9d70b791459ff5f50ae5a6704326de309d
 
-PODFILE CHECKSUM: c2e5041d113cc808a4fe9f0cd78ab3668eafd358
+PODFILE CHECKSUM: 054d39c03a614857054eb4cc5a0cc2d41460976a
 
 COCOAPODS: 1.0.1

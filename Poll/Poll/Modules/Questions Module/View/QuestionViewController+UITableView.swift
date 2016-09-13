@@ -31,7 +31,7 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
     let backgroundView = UIView()
     backgroundView.backgroundColor = UIColor.questionOrangeColor(1.0)
     cell.selectedBackgroundView = backgroundView
-    cell.setSelected(choice!.selected, animated: false)
+
     
     return cell
   }

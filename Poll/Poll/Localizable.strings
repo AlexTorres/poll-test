@@ -6,9 +6,19 @@
   Copyright © 2016 webcat. All rights reserved.
 */
 
-"QuestionnaireView..titleLabel.text"="WebCat Questionary";
+"QuestionnaireView.titleLabel.text"="WebCat Questionary";
 "QuestionView.sendButton.enabled.title"="Send Choice";
 "QuestionView.sendButton.disabled.title"="Please select a Choice";
+"QuestionnaireView.reloadEntries.enabled.title"="Reload Questions";
 
 "QuestionnaireView.sendQuestionaryButton.enabled.title"="Send form";
 "QuestionnaireView.sendQuestionaryButton.disabled.title"="Please Fill the form";
+
+
+"AdminView.showResult.enabled.title"="Show Votes";
+"AdminView.addQuestionButton.enabled.title"="Create question";
+
+"AdminView.titleLabel.text"="WebCat Admin";
+
+"ResultsView.titleLabel.text"="Results";
+"AddQuestionsView.titleLabel.text"="Add Question";
