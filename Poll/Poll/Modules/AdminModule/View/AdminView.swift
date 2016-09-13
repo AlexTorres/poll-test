@@ -24,6 +24,10 @@ class AdminView: UIViewController, SetupViewProtocol, AdminViewProtocol {
     
     // Do any additional setup after loading the view.
   }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    refreshResults()
+  }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -31,7 +35,11 @@ class AdminView: UIViewController, SetupViewProtocol, AdminViewProtocol {
   }
   func setUpView() {
     wireframe = AdminWireframe(viewProtocol: self)
+    refreshResults()
+  }
+  func refreshResults() {
     presenter?.getQuestions()
+    
   }
   func refreshView() {
     
