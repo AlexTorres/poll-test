@@ -12,8 +12,6 @@ Welcome for start running the project download it, in console go where is the po
 
 * For networking [Alamofire](https://github.com/Alamofire/Alamofire)
 
-* Mapping JSON [JSONModel](https://github.com/icanzilb/JSONModel)
-
 * Animation [POP](https://github.com/facebook/pop)
 
 * Charts [Charts](https://github.com/danielgindi/Charts)
