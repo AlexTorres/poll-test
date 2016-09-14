@@ -8,12 +8,14 @@
 
 import XCTest
 import ObjectMapper
+import SwiftCharts
 @testable import Poll
 
 class AdminModuleTest: XCTestCase {
   
   let view = AdminView()
   var questionItem: QuestionsModel?
+  var questionItemZeroVotes: QuestionsModel?
   var presenter: protocol<AdminPresenterProtocol, AdminDataManagerOutputProtocol>?
   var wireframe: AdminWireframeProtocol?
   var interactor: AdminDataManagerInputProtocol?
@@ -24,18 +26,19 @@ class AdminModuleTest: XCTestCase {
     presenter = view.presenter
     wireframe = view.wireframe
     interactor = presenter?.interactor
-    loadMock()
+    questionItem = questionItemWithMock("mock")
+    questionItemZeroVotes = questionItemWithMock("mockZero")
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
-  func loadMock() {
+  func questionItemWithMock(jsonName: String?) -> QuestionsModel? {
     interactor = presenter?.interactor
     let bundle = NSBundle(forClass: self.dynamicType)
-    let path = bundle.pathForResource("mock", ofType: "json")
+    let path = bundle.pathForResource(jsonName, ofType: "json")
     let jsonData = NSData(contentsOfFile: path!)
     let dataString = String(data: jsonData!, encoding: NSUTF8StringEncoding)
     let jsonSting = "{\"result\":\(dataString!)}"
-    questionItem = Mapper<QuestionsModel>().map(jsonSting)
+    return Mapper<QuestionsModel>().map(jsonSting)
   }
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
@@ -57,18 +60,37 @@ class AdminModuleTest: XCTestCase {
     let selectedQuestion = questionItem?.questions![0]
     XCTAssertNotNil(selectedQuestion)
     
-    let questionsWireframe = wireframe as? AdminWireframe
-    presenter?.presentResuls(questionItem)
-    XCTAssertNotNil(questionsWireframe?.presentedView)
-    XCTAssertNotNil(questionsWireframe?.resultView)
+    let adminWireframe = wireframe as? AdminWireframe
+    presenter?.presentResults(questionItem)
+    XCTAssertNotNil(adminWireframe?.presentedView)
+    XCTAssertNotNil(adminWireframe?.resultView)
     presenter?.presentAddQuestion()
-    XCTAssertNotNil(questionsWireframe?.addQuestionView)
+    XCTAssertNotNil(adminWireframe?.addQuestionView)
     
+  }
+  func testDataForShow() {
+    let adminWireframe = wireframe as? AdminWireframe
+    view.questions = questionItem
+    view.showResults(self)
+    let resultView = adminWireframe?.resultView
+    
+    XCTAssertNotNil(resultView?.questions)
+  }
+  
+  func testDataZeroForShow() {
+    let viewZero = AdminView()
+    viewZero.setUpView()
+    let adminWireframe = viewZero.presenter?.wireframe as? AdminWireframe
+    viewZero.questions = questionItemZeroVotes
+    viewZero.showResults(self)
+    let resultView = adminWireframe?.resultView
+    
+    XCTAssertNil(resultView)
   }
   
   func testProtocolsConnections() {
-    let questionsWireframe = wireframe as? AdminWireframe
-    XCTAssertTrue(view === questionsWireframe?.presentedView)
+    let adminWireframe = wireframe as? AdminWireframe
+    XCTAssertTrue(view === adminWireframe?.presentedView)
     XCTAssertTrue(presenter?.wireframe === view.wireframe)
     XCTAssertTrue(presenter === interactor?.presenter)
   }

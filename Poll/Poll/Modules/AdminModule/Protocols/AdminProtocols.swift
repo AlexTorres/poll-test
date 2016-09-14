@@ -23,7 +23,7 @@ protocol AdminPresenterProtocol: class {
   var wireframe: AdminWireframeProtocol? { get set }
   
   func getQuestions()
-  func presentResuls(questions: QuestionsModel?)
+  func presentResults(questions: QuestionsModel?)
   func presentAddQuestion()
   func closeAddQuestionView()
   

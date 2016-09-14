@@ -21,7 +21,7 @@ class AdminPresenter: AdminPresenterProtocol, AdminDataManagerOutputProtocol, Ad
   func loadedQuestions(questions: QuestionsModel?) {
     view?.questions = questions
   }
-  func presentResuls(questions: QuestionsModel?) {
+  func presentResults(questions: QuestionsModel?) {
     wireframe?.presentResultView(questions)
   }
   func presentAddQuestion() {

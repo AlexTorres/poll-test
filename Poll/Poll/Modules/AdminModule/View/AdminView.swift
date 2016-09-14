@@ -57,12 +57,12 @@ class AdminView: UIViewController, SetupViewProtocol, AdminViewProtocol {
     self.title = NSLocalizedString("AdminView.titleLabel.text", comment: "")
   }
   @IBAction func showResults(sender: AnyObject) {
-    guard questions != nil else {
+    guard questions != nil && questions?.questions?.count != 0 else {
       HUD.flash(.Error, delay: 1.0)
       return
     }
     
-    presenter?.presentResuls(questions)
+    presenter?.presentResults(questions)
   }
   
   @IBAction func addNewQuestionAction(sender: AnyObject) {

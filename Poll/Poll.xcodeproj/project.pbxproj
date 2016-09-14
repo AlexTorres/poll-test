@@ -63,6 +63,7 @@
 		FAB41D781D8748C900D58FF5 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D771D8748C900D58FF5 /* AdminPresenter.swift */; };
 		FAB41D7A1D87556800D58FF5 /* AdminWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D791D87556800D58FF5 /* AdminWireframe.swift */; };
 		FAB41D7D1D875F0900D58FF5 /* AdminModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB41D7C1D875F0900D58FF5 /* AdminModuleTest.swift */; };
+		FAB908021D89C2DE008D87A6 /* mockZeroVotes.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB908011D89C2DE008D87A6 /* mockZeroVotes.json */; };
 		FAF0DE0C1D839CF5008C9899 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0B1D839CF5008C9899 /* Configuration.swift */; };
 		FAF0DE0E1D83A41A008C9899 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0D1D83A41A008C9899 /* Constants.swift */; };
 		FAF0DE101D83B011008C9899 /* EmumsAndDefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0DE0F1D83B011008C9899 /* EmumsAndDefs.swift */; };
@@ -156,6 +157,7 @@
 		FAB41D771D8748C900D58FF5 /* AdminPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
 		FAB41D791D87556800D58FF5 /* AdminWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminWireframe.swift; sourceTree = "<group>"; };
 		FAB41D7C1D875F0900D58FF5 /* AdminModuleTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminModuleTest.swift; path = PollTests/AdminModuleTest/AdminModuleTest.swift; sourceTree = SOURCE_ROOT; };
+		FAB908011D89C2DE008D87A6 /* mockZeroVotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockZeroVotes.json; sourceTree = "<group>"; };
 		FAF0DE0B1D839CF5008C9899 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FAF0DE0D1D83A41A008C9899 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAF0DE0F1D83B011008C9899 /* EmumsAndDefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmumsAndDefs.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				FA8302301D8437B600A0ECD1 /* mock.json */,
 				FA896A1D1D85EF4E00EAB1EC /* mockZero.json */,
+				FAB908011D89C2DE008D87A6 /* mockZeroVotes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8302311D8437B600A0ECD1 /* mock.json in Resources */,
+				FAB908021D89C2DE008D87A6 /* mockZeroVotes.json in Resources */,
 				FA896A1E1D85EF4F00EAB1EC /* mockZero.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
